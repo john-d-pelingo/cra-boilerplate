@@ -1,0 +1,73 @@
+{
+  "name": "cra-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for create-react-app with extended configuration.",
+  "private": true,
+  "homepage": "https://john-d-pelingo.github.io/cra-boilerplate",
+  "author": "John Darryl Pelingo <johndarrylpelingo@gmail.com> (https://github.com/john-d-pelingo)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/john-d-pelingo/cra-boilerplate.git"
+  },
+  "scripts": {
+    "build": "npm run build:js",
+    "build:cd": "run-s build:js",
+    "build:js": "cross-env NODE_PATH=src react-scripts build",
+    "copy-circle-ci-yml": "node scripts/copy-circle-ci-yml.js",
+    "deploy": "run-s build deploy:gh",
+    "deploy:gh": "gh-pages -m 'Updates [ci skip]' -d build",
+    "eject": "cross-env NODE_PATH=src react-scripts eject",
+    "lint": "eslint .",
+    "postbuild:cd": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "prebuild": "run-s sweep lint test",
+    "prebuild:cd": "run-s sweep lint test:c",
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "sweep": "rimraf build coverage",
+    "test": "cross-env NODE_PATH=src CI=true react-scripts test --env=jsdom --no-cache",
+    "test:c": "cross-env NODE_PATH=src CI=true react-scripts test --env=jsdom --no-cache --coverage",
+    "w:lint": "esw . --config .eslintrc.yml --color --watch",
+    "w:test": "cross-env NODE_PATH=src react-scripts test --env=jsdom --no-cache"
+  },
+  "keywords": [
+    "create-react-app"
+  ],
+  "dependencies": {
+    "prop-types": "15.5.10",
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
+    "react-redux": "5.0.5",
+    "redux": "3.6.0",
+    "redux-thunk": "2.2.0",
+    "sieses": "0.1.4",
+    "styled-components": "2.0.1"
+  },
+  "devDependencies": {
+    "coveralls": "2.13.1",
+    "cross-env": "5.0.1",
+    "enzyme": "2.8.2",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.1",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-react": "7.0.1",
+    "eslint-watch": "3.1.0",
+    "fs-extra": "3.0.1",
+    "gh-pages": "1.0.0",
+    "npm-run-all": "4.0.2",
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "15.5.4",
+    "redux-logger": "3.0.6",
+    "rimraf": "2.6.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/*.js",
+      "!src/core/*.js",
+      "!src/core/**/index.js",
+      "!src/views/**/index.js",
+      "!<rootDir>/node_modules/"
+    ]
+  }
+}
