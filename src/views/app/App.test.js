@@ -10,12 +10,16 @@ describe('App Main Container', () => {
       ReactDOM.render(<App />, div);
     });
 
-    it('should be selectable by class ".app"', () => {
+    it('should be selectable by class "app"', function() {
       expect(shallow(<App />).is('.app')).toBe(true);
     });
 
-    it('should mount in a full DOM', () => {
+    it('should mount in a full DOM', function() {
       expect(mount(<App />).find('.app').length).toBe(1);
+    });
+
+    it('should render to static HTML', function() {
+      expect(render(<App />).text()).toEqual('App Container');
     });
   });
 });

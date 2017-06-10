@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  children: PropTypes.node.isRequired
+};
+
+const defaultProps = {
+  children: []
+};
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
   render() {
+    const { children } = this.props;
+
     return (
       <div className="app">
-        App Component
+        <div className="header">
+          <span>App Container</span>
+        </div>
+
+        <main>{ children }</main>
       </div>
     );
   }
 }
+
+App.propTypes = propTypes;
+App.defaultProps = defaultProps;
 
 export default App;
