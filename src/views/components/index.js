@@ -1,7 +1,7 @@
-/* eslint-disable import/prefer-default-export */
-
 import Content from './Content';
+import Counter from './Counter';
 
 export {
-  Content
+  Content,
+  Counter
 };

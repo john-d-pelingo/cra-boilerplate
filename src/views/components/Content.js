@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledButton } from 'views/styled-elements';
-
 const propTypes = {
   name: PropTypes.string.isRequired,
   surname: PropTypes.string.isRequired,
 
-  handleButtonClick: PropTypes.func.isRequired
+  changeName: PropTypes.func.isRequired
 };
 
-const Content = ({ name, surname, handleButtonClick }) => (
+const Content = ({ name, surname, changeName }) => (
   <div className="content">
-    <StyledButton onClick={ handleButtonClick }>Update name</StyledButton>
+    <button onClick={ changeName }>Update name</button>
     <br />
     <span>Full Name: { name } { surname }</span>
   </div>

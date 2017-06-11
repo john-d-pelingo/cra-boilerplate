@@ -3,18 +3,22 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
-import { Content } from 'views/components';
+import { Content, Counter } from 'views/components';
 import { idActions, idSelectors } from 'core/id';
+import { counterActions, counterSelectors } from 'core/counter';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
+  seconds: PropTypes.number.isRequired,
   surname: PropTypes.string.isRequired,
 
-  changeName: PropTypes.func.isRequired
+  changeName: PropTypes.func.isRequired,
+  startCounter: PropTypes.func.isRequired,
+  stopCounter: PropTypes.func.isRequired
 };
 
 export class Main extends Component {
-  handleButtonClick = event => {
+  handleContentButtonClick = event => {
     event.preventDefault();
 
     const newName = {
@@ -25,12 +29,25 @@ export class Main extends Component {
     return this.props.changeName(newName);
   };
 
+  handleCounterStartCounter = event => {
+    event.preventDefault();
+
+    return this.props.startCounter();
+  };
+
+  handleCounterStopCounter = event => {
+    event.preventDefault();
+
+    return this.props.stopCounter();
+  };
+
   render() {
-    const { name, surname } = this.props;
+    const { name, seconds, surname } = this.props;
 
     return (
       <div className="main">
-        <Content name={ name === '' ? 'John' : name } surname={ surname === '' ? 'Doe' : surname } handleButtonClick={ this.handleButtonClick } />
+        <Content name={ name === '' ? 'John' : name } surname={ surname === '' ? 'Doe' : surname } changeName={ this.handleContentButtonClick } />
+        <Counter seconds={ seconds } startCounter={ this.handleCounterStartCounter } stopCounter={ this.handleCounterStopCounter } />
       </div>
     );
   }
@@ -40,15 +57,19 @@ Main.propTypes = propTypes;
 
 const mapStateToProps = createSelector(
   idSelectors.getName,
+  counterSelectors.getCount,
   idSelectors.getSurname,
-  (name, surname) => ({
+  (name, count, surname) => ({
     name,
+    seconds: count,
     surname
   })
 );
 
 const mapDispatchToProps = {
-  changeName: idActions.changeName
+  changeName: idActions.changeName,
+  startCounter: counterActions.start,
+  stopCounter: counterActions.stop
 };
 
 const MainContainer = connect(mapStateToProps, mapDispatchToProps)(Main);

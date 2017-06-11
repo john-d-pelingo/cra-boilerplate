@@ -1,14 +1,16 @@
 import { applyMiddleware, compose, createStore } from 'redux';
-import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 
 import reducers from './reducers';
+import sagas from './sagas';
 
 export default (initialState = {}) => {
-  let middlewares = applyMiddleware(thunk);
+  const sagaMiddleware = createSagaMiddleware();
+  let middlewares = applyMiddleware(sagaMiddleware);
 
   if (process.env.NODE_ENV === 'development') {
-    middlewares = applyMiddleware(thunk, logger);
+    middlewares = applyMiddleware(sagaMiddleware, logger);
 
     // Configure redux-devtools-extension.
     // @see https://github.com/zalmoxisus/redux-devtools-extension
@@ -19,5 +21,8 @@ export default (initialState = {}) => {
     }
   }
 
-  return createStore(reducers, initialState, middlewares);
+  const store = createStore(reducers, initialState, middlewares);
+  sagaMiddleware.run(sagas);
+
+  return store;
 };
