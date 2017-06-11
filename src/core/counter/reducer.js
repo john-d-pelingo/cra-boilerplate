@@ -17,7 +17,7 @@ export function counterReducer(state = initialState, action = {}) {
       return state.set('isRunning', false);
 
     case actionTypes.TICK:
-      return state.update('count', (value) => value + 1);
+      return state.update('count', value => value + 1);
 
     case actionTypes.RESET:
       return state.merge(initialState);
