@@ -22,46 +22,48 @@
     "postbuild:cd": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "prebuild": "run-s sweep lint test",
     "prebuild:cd": "run-s sweep lint test:c",
-    "start": "cross-env NODE_PATH=src react-scripts start",
+    "start": "cross-env react-scripts start",
     "sweep": "rimraf build coverage",
-    "test": "cross-env NODE_PATH=src CI=true react-scripts test --env=jsdom --no-cache",
-    "test:c": "cross-env NODE_PATH=src CI=true react-scripts test --env=jsdom --no-cache --coverage",
+    "test": "cross-env CI=true react-scripts test --env=jsdom --no-cache",
+    "test:c": "cross-env CI=true react-scripts test --env=jsdom --no-cache --coverage",
     "w:lint": "esw . --config .eslintrc.yml --color --watch",
-    "w:test": "cross-env NODE_PATH=src react-scripts test --env=jsdom --no-cache"
+    "w:test": "cross-env react-scripts test --env=jsdom --no-cache"
   },
   "keywords": [
     "create-react-app"
   ],
   "dependencies": {
     "immutable": "3.8.1",
-    "polished": "1.1.3",
+    "polished": "^1.3.0",
     "prop-types": "15.5.10",
-    "react": "15.5.4",
-    "react-dom": "15.5.4",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
     "react-redux": "5.0.5",
-    "redux": "3.6.0",
-    "redux-saga": "0.15.3",
+    "redux": "^3.7.1",
+    "redux-saga": "^0.15.4",
     "reselect": "3.0.1",
     "sieses": "0.1.4",
-    "styled-components": "2.0.1"
+    "styled-components": "^2.1.1"
   },
   "devDependencies": {
     "coveralls": "2.13.1",
     "cross-env": "5.0.1",
-    "enzyme": "2.8.2",
+    "enzyme": "^2.9.1",
     "eslint": "3.19.0",
-    "eslint-config-airbnb": "15.0.1",
-    "eslint-plugin-import": "2.3.0",
-    "eslint-plugin-jsx-a11y": "5.0.3",
-    "eslint-plugin-react": "7.0.1",
-    "eslint-watch": "3.1.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "eslint-watch": "3.1.2",
     "fs-extra": "3.0.1",
     "gh-pages": "1.0.0",
     "npm-run-all": "4.0.2",
-    "react-scripts": "1.0.7",
-    "react-test-renderer": "15.5.4",
+    "react-scripts": "^1.0.10",
+    "react-test-renderer": "15.6.1",
+    "redux-immutable-state-invariant": "2.0.0",
     "redux-logger": "3.0.6",
-    "rimraf": "2.6.1"
+    "rimraf": "2.6.1",
+    "why-did-you-update": "0.0.8"
   },
   "jest": {
     "collectCoverageFrom": [

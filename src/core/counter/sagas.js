@@ -13,7 +13,8 @@ function* watchStartTimer() {
   // Wake up when user starts timer.
   while (yield take(actionTypes.START)) {
     while (true) {
-      // This side effect is not run yet, so it can be treated as data, making it easier to test if needed.
+      // This side effect is not run yet, so it can be treated as data,
+      // making it easier to test if needed.
       yield call(delay, ONE_SECOND);
 
       // Check if the timer is still running.

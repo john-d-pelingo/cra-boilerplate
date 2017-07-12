@@ -5,23 +5,25 @@ import logger from 'redux-logger';
 import reducers from './reducers';
 import sagas from './sagas';
 
-export default (initialState = {}) => {
+export default (preloadedState = {}) => {
   const sagaMiddleware = createSagaMiddleware();
-  let middlewares = applyMiddleware(sagaMiddleware);
+  const middlewares = [sagaMiddleware];
+  let appliedMiddlewares = applyMiddleware(...middlewares);
 
   if (process.env.NODE_ENV === 'development') {
-    middlewares = applyMiddleware(sagaMiddleware, logger);
+    middlewares.push(logger, require('redux-immutable-state-invariant').default());
+    appliedMiddlewares = applyMiddleware(...middlewares);
 
     // Configure redux-devtools-extension.
     // @see https://github.com/zalmoxisus/redux-devtools-extension
-    const devToolsExtension = window.devToolsExtension;
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     if (typeof devToolsExtension === 'function') {
       // Compose all of our middlewares one after another.
-      middlewares = compose(middlewares, devToolsExtension());
+      appliedMiddlewares = composeEnhancers(appliedMiddlewares);
     }
   }
 
-  const store = createStore(reducers, initialState, middlewares);
+  const store = createStore(reducers, preloadedState, appliedMiddlewares);
   sagaMiddleware.run(sagas);
 
   return store;
