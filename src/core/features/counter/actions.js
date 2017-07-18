@@ -1,6 +1,5 @@
 import * as actionTypes from './action-types';
 
-// eslint-disable-next-line import/prefer-default-export
 export function start() {
   return {
     type: actionTypes.START

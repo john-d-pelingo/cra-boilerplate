@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
 import { Content, Counter } from 'views/components';
-import { idActions, idSelectors } from 'core/id';
-import { counterActions, counterSelectors } from 'core/counter';
+import { idActions, idSelectors } from 'core/features/id';
+import { counterActions, counterSelectors } from 'core/features/counter';
 
 const propTypes = {
   name: PropTypes.string.isRequired,

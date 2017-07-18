@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 export const colors = {
   // light shades
   white: '#FFFFFF',

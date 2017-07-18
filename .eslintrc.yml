@@ -29,6 +29,9 @@ rules:
   import/extensions: 0
   import/no-extraneous-dependencies: 0
   import/no-unresolved: 0
+  import/prefer-default-export: 0
+  react/jsx-closing-bracket-location: 0
+  react/prefer-stateless-function: 0
 
   # General
   array-bracket-spacing:
@@ -111,10 +114,10 @@ rules:
   - forbid:
     - any
   react/jsx-filename-extension: 0
-  react/jsx-closing-bracket-location:
-  - 2
-  - selfClosing: tag-aligned
-    nonEmpty: after-props
+#  react/jsx-closing-bracket-location:
+#  - 2
+#  - selfClosing: tag-aligned
+#    nonEmpty: after-props
   react/jsx-curly-spacing:
   - 2
   - always
