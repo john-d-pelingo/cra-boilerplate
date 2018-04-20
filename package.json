@@ -16,11 +16,13 @@
     "build": "cross-env react-scripts build",
     "build:ci": "run-s build",
     "eject": "cross-env react-scripts eject",
+    "husky:pre-commit": "run-s pretty lint test",
     "lint": "eslint .",
     "nuke": "rimraf node_modules yarn.lock && yarn install",
-    "prebuild": "run-s sweep pretty lint test",
-    "prebuild:ci": "run-s sweep pretty lint test:c",
+    "prebuild": "run-s sweep test",
+    "prebuild:ci": "run-s sweep test:c",
     "precommit": "lint-staged",
+    "prep": "run-s husky:pre-commit",
     "pretty": "prettier --write --config .prettierrc 'src/**/*.{js,jsx,css}'",
     "serve": "serve -so build -p 8080",
     "server": "json-server server/db.json --config server/json-server.json --routes server/routes.json",
@@ -45,8 +47,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
+    "husky": "^1.0.0-rc.1",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.9.2",
     "react-scripts": "1.1.4",
@@ -63,10 +64,9 @@
       "!<rootDir>/node_modules/"
     ]
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,css,scss}": [
-      "prettier --write --config .prettierrc",
-      "git add"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run husky:pre-commit"
+    }
   }
 }
