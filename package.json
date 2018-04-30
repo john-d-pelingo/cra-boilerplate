@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "cross-env react-scripts build",
-    "build:ci": "run-s build",
+    "build:ci": "cross-env react-scripts build",
     "eject": "cross-env react-scripts eject",
     "husky:pre-commit": "run-s pretty lint test",
     "lint": "eslint .",
