@@ -31,8 +31,8 @@
     "w:test": "cross-env react-scripts test --env=jsdom --no-cache --verbose"
   },
   "dependencies": {
-    "react": "16.3.2",
-    "react-dom": "16.3.2"
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   },
   "devDependencies": {
     "cross-env": "^5.1.3",
