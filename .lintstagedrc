@@ -1,0 +1,13 @@
+{
+  "concurrent": false,
+  "linters": {
+    "src/**/*.{js,css}": [
+      "npm run pretty",
+      "git add"
+    ],
+    "src/**/*.js": [
+      "npm run lint",
+      "git add"
+    ]
+  }
+}

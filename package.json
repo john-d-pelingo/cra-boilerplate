@@ -62,16 +62,5 @@
       "!src/utilities/test-utils.js",
       "!<rootDir>/node_modules/"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-s pretty lint:staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,css}": [
-      "npm run pretty",
-      "git add"
-    ]
   }
 }
