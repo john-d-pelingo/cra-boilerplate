@@ -5,11 +5,13 @@
 Dependencies that go together[^1]:
 
 Enzyme
+
 - `enzyme`
 - `enzyme-adapter-react-16`
 - `enzyme-to-json`
 
 Eslint
+
 - `eslint`
 - `eslint-config-airbnb`
 - `eslint-config-prettier`
@@ -18,6 +20,7 @@ Eslint
 - `eslint-plugin-react`
 
 Redux:
+
 - `redux`
 - ~~`redux-devtools-extension`~~
 - ~~`redux-immutable-state-invariant`~~
