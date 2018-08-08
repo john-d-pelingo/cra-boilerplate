@@ -31,13 +31,13 @@
     "w:test": "cross-env react-scripts test --env=jsdom --no-cache --verbose"
   },
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme": "^3.4.0",
+    "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^17.0.0",
@@ -50,7 +50,7 @@
     "npm-run-all": "^4.1.2",
     "prettier": "^1.14.0",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.4.1",
+    "react-test-renderer": "^16.4.2",
     "rimraf": "^2.6.2",
     "serve": "^9.4.0"
   },
