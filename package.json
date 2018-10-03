@@ -31,28 +31,28 @@
     "w:test": "cross-env react-scripts test --env=jsdom --no-cache --verbose"
   },
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "enzyme-to-json": "^3.3.1",
-    "eslint": "^5.5.0",
+    "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.2",
+    "husky": "^1.1.0",
+    "lint-staged": "^7.3.0",
     "npm-run-all": "^4.1.2",
-    "prettier": "^1.14.2",
+    "prettier": "^1.14.3",
     "react-scripts": "^1.1.5",
-    "react-test-renderer": "^16.4.2",
+    "react-test-renderer": "^16.5.2",
     "rimraf": "^2.6.2",
-    "serve": "^10.0.0"
+    "serve": "^10.0.2"
   },
   "jest": {
     "collectCoverageFrom": [
