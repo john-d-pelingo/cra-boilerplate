@@ -1,5 +1,3 @@
-'use strict';
-
 // Make Enzyme functions available in all test files without importing
 import Enzyme, { shallow, render, mount } from 'enzyme';
 // React 16 adapter

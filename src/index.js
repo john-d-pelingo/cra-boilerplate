@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 
 import App from './components/app';
 import './styles/reset.css';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
-// eslint-disable-next-line no-unused-expressions
+
+serviceWorker.unregister();
+
 module.hot && module.hot.accept();

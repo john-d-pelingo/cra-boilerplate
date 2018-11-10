@@ -26,3 +26,8 @@ Redux:
 - ~~`redux-immutable-state-invariant`~~
 
 [^1]: strikethroughed dependencies means that they are not in `package.json`
+
+## TODOs
+
+- add TS
+- replace `enzyme` with `react-testing-library`
