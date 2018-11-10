@@ -1,5 +1,5 @@
 {
-  "src/**/*.{css,js,jsx}": [
+  "src/**/*.{css,js,ts,tsx}": [
     "npm run validate",
     "git add"
   ]
