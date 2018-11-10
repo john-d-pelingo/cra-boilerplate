@@ -1,12 +1,6 @@
 {
-  "concurrent": false,
-  "linters": {
-    "src/**/*.{css,js,jsx}": [
-      "npm run format",
-      "git add"
-    ],
-    "src/**/*.{js,jsx}": [
-      "npm run lint"
-    ]
-  }
+  "src/**/*.{css,js,jsx}": [
+    "npm run validate",
+    "git add"
+  ]
 }

@@ -21,3 +21,6 @@ globals:
   mount: true
   render: true
   shallow: true
+
+rules:
+  semi: off
