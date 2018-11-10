@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 
 import logo from 'src/assets/logo.svg'
 import 'src/styles/components/app.css'
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
