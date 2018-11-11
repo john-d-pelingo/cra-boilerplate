@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import 'src/assets/reset.css'
 
-import { App } from './components/app'
+import { App } from './components'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(<App />, document.getElementById('root'))
