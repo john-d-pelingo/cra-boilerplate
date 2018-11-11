@@ -7,3 +7,4 @@ export {
   GreetingLoaderHttpJestMock,
 } from './TestingJavaScriptGreetingLoader'
 export { default as HiddenMessage } from './TestingJavaScriptHiddenMessage'
+export { default as ReactRouter } from './TestingJavaScriptReactRouter'
