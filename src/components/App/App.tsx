@@ -1,6 +1,8 @@
 import * as React from 'react'
 
 import logo from 'src/assets/logo.svg'
+
+import { FavoriteNumber } from '../'
 import styles from './styles.module.scss'
 
 class App extends React.Component {
@@ -15,9 +17,10 @@ class App extends React.Component {
           To get started, edit <code>src/components/app/app.tsx</code> and save
           to reload.
         </p>
+        <FavoriteNumber />
       </div>
     )
   }
 }
 
-export { App }
+export default App
