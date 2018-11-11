@@ -45,4 +45,4 @@ class FavoriteNumber extends React.Component<
   }
 }
 
-export { FavoriteNumber }
+export default FavoriteNumber
