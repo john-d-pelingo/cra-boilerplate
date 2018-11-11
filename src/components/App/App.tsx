@@ -2,7 +2,11 @@ import * as React from 'react'
 
 import logo from 'src/assets/logo.svg'
 
-import { FavoriteNumber } from '../'
+import {
+  FavoriteNumber,
+  GreetingLoaderDependencyInjection,
+  GreetingLoaderHttpJestMock,
+} from '../'
 import styles from './styles.module.scss'
 
 class App extends React.Component {
@@ -18,6 +22,8 @@ class App extends React.Component {
           to reload.
         </p>
         <FavoriteNumber />
+        <GreetingLoaderHttpJestMock />
+        <GreetingLoaderDependencyInjection />
       </div>
     )
   }
