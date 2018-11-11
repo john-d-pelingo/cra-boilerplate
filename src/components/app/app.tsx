@@ -8,11 +8,12 @@ class App extends React.Component {
     return (
       <div className={styles.app}>
         <header className={styles.appHeader}>
-          <img src={logo} className={styles.appLogo} alt="logo" />
+          <img src={logo} className={styles.appLogo} alt="App Logo" />
           <h1 className={styles.appTitle}>Welcome to React</h1>
         </header>
         <p className={styles.appIntro}>
-          To get started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/components/app/app.tsx</code> and save
+          to reload.
         </p>
       </div>
     )

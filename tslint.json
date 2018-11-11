@@ -12,6 +12,7 @@
   },
   "rules": {
     "member-access": [true, "no-public"],
+    "no-console": false,
     "prettier": true
   },
   "rulesDirectory": [
