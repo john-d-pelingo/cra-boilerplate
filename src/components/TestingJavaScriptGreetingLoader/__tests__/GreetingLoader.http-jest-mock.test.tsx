@@ -3,10 +3,10 @@ import 'jest-dom/extend-expect'
 import * as React from 'react'
 import { fireEvent, render, wait } from 'react-testing-library'
 
-import { loadGreeting as mockedLoadGreeting } from '../api'
+import { loadGreeting as mockedLoadGreeting } from '../../../helpers/api'
 import GreetingLoader from '../GreetingLoader.http-jest-mock'
 
-jest.mock('../api', () => ({
+jest.mock('../../../helpers/api', () => ({
   loadGreeting: jest.fn(subject =>
     Promise.resolve({
       data: {

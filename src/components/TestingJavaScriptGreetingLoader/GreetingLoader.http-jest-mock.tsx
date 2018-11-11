@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { loadGreeting } from './api'
+
+import { loadGreeting } from '../../helpers/api'
 
 interface IGreetingLoaderState {
   greeting: string

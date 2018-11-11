@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { IGreeting } from './api'
+
+import { IGreeting } from '../../helpers/api'
 
 interface IGreetingLoaderProps {
   loadGreeting?: (subject: string) => Promise<IGreeting>
