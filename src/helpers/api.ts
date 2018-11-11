@@ -1,6 +1,8 @@
 // this is just a fake module to simulate interacting with a server
 
 // simulate the network request time...
+import { ErrorInfo } from 'react'
+
 const sleep = (time: number): Promise<void> =>
   new Promise(resolve => {
     setTimeout(resolve, time)
@@ -36,8 +38,12 @@ async function fetchRandomGreeting(): Promise<string> {
 
 // a fire-and-forget function to report errors
 // for componentDidCatch
-async function reportError(): Promise<{ success: boolean }> {
+async function reportError(
+  error: Error,
+  errorInfo: ErrorInfo,
+): Promise<{ success: boolean }> {
   await sleep(1000)
+  console.error(error.message, errorInfo)
   return { success: true }
 }
 
