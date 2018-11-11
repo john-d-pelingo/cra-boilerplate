@@ -6,6 +6,7 @@ import {
   FavoriteNumber,
   GreetingLoaderDependencyInjection,
   GreetingLoaderHttpJestMock,
+  HiddenMessage,
 } from '../'
 import styles from './styles.module.scss'
 
@@ -21,9 +22,15 @@ class App extends React.Component {
           To get started, edit <code>src/components/app/app.tsx</code> and save
           to reload.
         </p>
+
+        <br />
         <FavoriteNumber />
+        <br />
         <GreetingLoaderHttpJestMock />
+        <br />
         <GreetingLoaderDependencyInjection />
+        <br />
+        <HiddenMessage>Hello</HiddenMessage>
       </div>
     )
   }
