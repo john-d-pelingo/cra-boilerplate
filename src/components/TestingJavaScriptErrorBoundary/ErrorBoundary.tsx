@@ -1,4 +1,4 @@
-import React, { ErrorInfo } from 'react'
+import * as React from 'react'
 
 import { reportError } from '../../helpers/api'
 
@@ -16,7 +16,7 @@ class ErrorBoundary extends React.Component<
 > {
   state = { hasError: false }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.setState({ hasError: true })
     reportError(error, errorInfo)
   }

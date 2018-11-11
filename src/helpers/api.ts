@@ -8,13 +8,20 @@ const sleep = (time: number): Promise<void> =>
     setTimeout(resolve, time)
   })
 
-interface IPostData {
+interface IPostReturnData {
   data: {
-    post: string
+    post: IPostData
   }
 }
 
-async function savePost(postData: string): Promise<IPostData> {
+export interface IPostData {
+  authorId: string
+  content: string
+  tags: string[]
+  title: string
+}
+
+async function savePost(postData: IPostData): Promise<IPostReturnData> {
   await sleep(1000)
   return { data: { post: postData } }
 }
