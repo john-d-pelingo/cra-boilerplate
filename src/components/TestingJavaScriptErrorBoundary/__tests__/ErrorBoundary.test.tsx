@@ -47,6 +47,8 @@ describe('components/ErrorBoundary', () => {
     expect(mockedReportError).toHaveBeenCalledWith(error, errorInfo)
     expect(container).toHaveTextContent('There was a problem.')
     expect(console.error).toHaveBeenCalledTimes(2)
+
+    // Clear out mocks from this point and forward
     ;(console.error as any).mockClear()
     ;(mockedReportError as any).mockClear()
 

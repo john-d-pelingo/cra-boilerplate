@@ -3,6 +3,7 @@ import * as React from 'react'
 import logo from 'src/assets/logo.svg'
 
 import {
+  Editor,
   ErrorBoundary,
   FavoriteNumber,
   GreetingLoaderDependencyInjection,
@@ -44,6 +45,9 @@ class App extends React.Component {
             // Change `shouldThrow` to true to destroy this page
           })({ shouldThrow: false })}
         </ErrorBoundary>
+        <br />
+        {/* Will fail because Redirect is not inside Router */}
+        <Editor user={{ id: '1' }} />
       </div>
     )
   }
