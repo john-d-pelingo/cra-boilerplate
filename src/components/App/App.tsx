@@ -3,6 +3,7 @@ import * as React from 'react'
 import logo from 'src/assets/logo.svg'
 
 import {
+  ErrorBoundary,
   FavoriteNumber,
   GreetingLoaderDependencyInjection,
   GreetingLoaderHttpJestMock,
@@ -31,6 +32,18 @@ class App extends React.Component {
         <GreetingLoaderDependencyInjection />
         <br />
         <HiddenMessage>Hello</HiddenMessage>
+        <br />
+        <ErrorBoundary>
+          {(({ shouldThrow = true }: { shouldThrow?: boolean }) => {
+            if (shouldThrow) {
+              throw new Error('💣')
+            }
+
+            return null
+            // IIFE is needed to "render this component
+            // Change `shouldThrow` to true to destroy this page
+          })({ shouldThrow: false })}
+        </ErrorBoundary>
       </div>
     )
   }
