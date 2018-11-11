@@ -4,3 +4,4 @@ export {
   GreetingLoaderDependencyInjection,
   GreetingLoaderHttpJestMock,
 } from './TestingJavaScriptGreetingLoader'
+export { default as HiddenMessage } from './TestingJavaScriptHiddenMessage'
