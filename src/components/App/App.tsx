@@ -9,8 +9,11 @@ import {
   GreetingLoaderDependencyInjection,
   GreetingLoaderHttpJestMock,
   HiddenMessage,
+  Toggle,
 } from '../'
 import styles from './styles.module.scss'
+
+const WHY_YOU_NO_ERROR = 2
 
 class App extends React.Component {
   render() {
@@ -48,6 +51,12 @@ class App extends React.Component {
         <br />
         {/* Will fail because Redirect is not inside Router */}
         <Editor user={{ id: '1' }} />
+        <br />
+        <Toggle>
+          {({ on, toggle }) => (
+            <button onClick={toggle}>{on ? 'On' : 'Off'}</button>
+          )}
+        </Toggle>
       </div>
     )
   }
