@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import logo from 'src/assets/logo.svg'
 
 import {
@@ -12,8 +11,6 @@ import {
   Toggle,
 } from '../'
 import styles from './styles.module.scss'
-
-const WHY_YOU_NO_ERROR = 2
 
 class App extends React.Component {
   render() {
@@ -44,8 +41,8 @@ class App extends React.Component {
             }
 
             return null
-            // IIFE is needed to "render this component
-            // Change `shouldThrow` to true to destroy this page
+            // IIFE is needed to "render" this component
+            // Change `shouldThrow` to true to destroy this app
           })({ shouldThrow: false })}
         </ErrorBoundary>
         <br />
