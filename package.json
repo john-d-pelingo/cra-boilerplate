@@ -17,7 +17,7 @@
     "eject": "cross-env react-scripts eject",
     "format": "yarn pretty --write",
     "format:d": "yarn pretty --list-different",
-    "lint": "tslint --config tslint.json --project tsconfig.json *.{ts,tsx}",
+    "lint": "tslint --config tslint.json --project tsconfig.json --force *.{ts,tsx}",
     "lint:staged": "lint-staged",
     "nuke": "rimraf node_modules yarn.lock && yarn install",
     "prebuild": "run-s validate test sweep",
