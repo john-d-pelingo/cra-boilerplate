@@ -6,6 +6,12 @@ import { fireEvent, render } from 'react-testing-library'
 import FavoriteNumber from '../FavoriteNumber'
 
 describe('components/FavoriteNumber', () => {
+  it('mounts', () => {
+    const { container } = render(<FavoriteNumber />)
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
   it('entering an invalid value shows an error message', () => {
     const { getByTestId, getByLabelText, queryByTestId, rerender } = render(
       <FavoriteNumber />,
