@@ -1,6 +1,6 @@
 import 'jest-dom/extend-expect'
 
-import * as React from 'react'
+import React from 'react'
 import { render } from 'react-testing-library'
 
 import Toggle from '../Toggle'
