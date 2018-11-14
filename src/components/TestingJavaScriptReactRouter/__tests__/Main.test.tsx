@@ -1,7 +1,7 @@
 import 'jest-dom/extend-expect'
 
 import { createMemoryHistory, MemoryHistory } from 'history'
-import * as React from 'react'
+import React from 'react'
 import { Router } from 'react-router-dom'
 import { fireEvent, render } from 'react-testing-library'
 

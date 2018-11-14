@@ -6,6 +6,7 @@ export {
   GreetingLoaderDependencyInjection,
   GreetingLoaderHttpJestMock,
 } from './TestingJavaScriptGreetingLoader'
+export { default as Modal } from './TestingJavaScriptPortals'
 export { default as ReactRouter } from './TestingJavaScriptReactRouter'
 export {
   default as HiddenMessage,
