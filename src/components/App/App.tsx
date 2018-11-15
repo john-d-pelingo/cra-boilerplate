@@ -29,31 +29,31 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h1>Basic</h1>
+        <h1 className={styles.titles}>Basic</h1>
         <br />
         <FavoriteNumber />
         <br />
         <br />
 
-        <h1>Mock</h1>
+        <h1 className={styles.titles}>Mock</h1>
         <br />
         <GreetingLoaderHttpJestMock />
         <br />
         <br />
 
-        <h1>Dependency Injection</h1>
+        <h1 className={styles.titles}>Dependency Injection</h1>
         <br />
         <GreetingLoaderDependencyInjection />
         <br />
         <br />
 
-        <h1>React Transition Group</h1>
+        <h1 className={styles.titles}>React Transition Group</h1>
         <br />
         <HiddenMessage>Hello</HiddenMessage>
         <br />
         <br />
 
-        <h1>Error Boundary</h1>
+        <h1 className={styles.titles}>Error Boundary</h1>
         <br />
         <ErrorBoundary>
           {(({ shouldThrow = true }: { shouldThrow?: boolean }) => {
@@ -69,14 +69,14 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h1>React Router</h1>
+        <h1 className={styles.titles}>React Router</h1>
         <br />
         {/* Submitting will fail because Redirect is not inside Router */}
         <Editor user={{ id: '1' }} />
         <br />
         <br />
 
-        <h1>Render Prop</h1>
+        <h1 className={styles.titles}>Render Prop</h1>
         <br />
         <Toggle>
           {({ on, toggle }) => (
@@ -86,13 +86,13 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h1>React Modal</h1>
+        <h1 className={styles.titles}>React Modal</h1>
         <br />
         <Modal>Modal boyz</Modal>
         <br />
         <br />
 
-        <h1>React Unmount</h1>
+        <h1 className={styles.titles}>React Unmount</h1>
         <br />
         <Countdown />
       </div>
