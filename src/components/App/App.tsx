@@ -3,6 +3,7 @@ import logo from 'src/assets/logo.svg'
 
 import {
   Countdown,
+  Counter,
   Editor,
   ErrorBoundary,
   FavoriteNumber,
@@ -20,7 +21,7 @@ class App extends React.Component {
       <div className={styles.app}>
         <header className={styles.appHeader}>
           <img src={logo} className={styles.appLogo} alt="App Logo" />
-          <h1 className={styles.appTitle}>Welcome to React</h1>
+          <h2 className={styles.appTitle}>Welcome to React</h2>
         </header>
         <p className={styles.appIntro}>
           To get started, edit <code>src/components/app/app.tsx</code> and save
@@ -29,31 +30,41 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h1 className={styles.titles}>Basic</h1>
+        <h1 className={styles.title}>Egghead</h1>
+        <br />
+        <h2 className={styles.subtitle}>useState & useEffect</h2>
+        <br />
+        <Counter />
+        <br />
+        <br />
+
+        <h1 className={styles.title}>Testing JavaScript</h1>
+        <br />
+        <h2 className={styles.subtitle}>Basic</h2>
         <br />
         <FavoriteNumber />
         <br />
         <br />
 
-        <h1 className={styles.titles}>Mock</h1>
+        <h2 className={styles.subtitle}>Mock</h2>
         <br />
         <GreetingLoaderHttpJestMock />
         <br />
         <br />
 
-        <h1 className={styles.titles}>Dependency Injection</h1>
+        <h2 className={styles.subtitle}>Dependency Injection</h2>
         <br />
         <GreetingLoaderDependencyInjection />
         <br />
         <br />
 
-        <h1 className={styles.titles}>React Transition Group</h1>
+        <h2 className={styles.subtitle}>React Transition Group</h2>
         <br />
         <HiddenMessage>Hello</HiddenMessage>
         <br />
         <br />
 
-        <h1 className={styles.titles}>Error Boundary</h1>
+        <h2 className={styles.subtitle}>Error Boundary</h2>
         <br />
         <ErrorBoundary>
           {(({ shouldThrow = true }: { shouldThrow?: boolean }) => {
@@ -69,14 +80,14 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h1 className={styles.titles}>React Router</h1>
+        <h2 className={styles.subtitle}>React Router</h2>
         <br />
         {/* Submitting will fail because Redirect is not inside Router */}
         <Editor user={{ id: '1' }} />
         <br />
         <br />
 
-        <h1 className={styles.titles}>Render Prop</h1>
+        <h2 className={styles.subtitle}>Render Prop</h2>
         <br />
         <Toggle>
           {({ on, toggle }) => (
@@ -86,13 +97,13 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h1 className={styles.titles}>React Modal</h1>
+        <h2 className={styles.subtitle}>React Modal</h2>
         <br />
         <Modal>Modal boyz</Modal>
         <br />
         <br />
 
-        <h1 className={styles.titles}>React Unmount</h1>
+        <h2 className={styles.subtitle}>React Unmount</h2>
         <br />
         <Countdown />
       </div>

@@ -16,7 +16,7 @@ afterEach(() => {
 })
 
 describe('components/Countdown', () => {
-  it('does not attempt to set state when unmounted (to prevent memoty leaks)', () => {
+  it('does not attempt to set state when unmounted (to prevent memory leaks)', () => {
     const { unmount } = render(<Countdown />)
     unmount()
     jest.runOnlyPendingTimers()

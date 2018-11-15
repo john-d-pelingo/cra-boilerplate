@@ -1,4 +1,5 @@
 export { default as App } from './App'
+export { default as Counter } from './EggheadUseHook'
 export { default as FavoriteNumber } from './TestingJavaScriptBasic'
 export { default as ErrorBoundary } from './TestingJavaScriptErrorBoundary'
 export { default as Editor } from './TestingJavaScriptForm'
