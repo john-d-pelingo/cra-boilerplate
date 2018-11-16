@@ -11,6 +11,7 @@ import {
   GreetingLoaderHttpJestMock,
   HiddenMessage,
   Modal,
+  Tilt,
   Toggle,
 } from '../'
 import styles from './styles.module.scss'
@@ -35,6 +36,12 @@ class App extends React.Component {
         <h2 className={styles.subtitle}>useState & useEffect</h2>
         <br />
         <Counter />
+        <br />
+        <br />
+
+        <h2 className={styles.subtitle}>useRef</h2>
+        <br />
+        <Tilt>vanilla-tilt.js</Tilt>
         <br />
         <br />
 
