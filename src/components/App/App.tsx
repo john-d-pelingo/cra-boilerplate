@@ -11,6 +11,7 @@ import {
   GreetingLoaderHttpJestMock,
   HiddenMessage,
   Modal,
+  Stopwatch,
   Tilt,
   Toggle,
 } from '../'
@@ -39,9 +40,15 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h2 className={styles.subtitle}>useRef</h2>
+        <h2 className={styles.subtitle}>useEffect & useRef</h2>
         <br />
         <Tilt>vanilla-tilt.js</Tilt>
+        <br />
+        <br />
+
+        <h2 className={styles.subtitle}>useReducer & useEffect & useRef</h2>
+        <br />
+        <Stopwatch />
         <br />
         <br />
 
