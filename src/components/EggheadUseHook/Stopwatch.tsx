@@ -1,48 +1,22 @@
 import React, { useEffect, useReducer, useRef } from 'react'
 
-interface IInitialState {
+interface ICurrentState {
   lapse: number
   running: boolean
 }
 
-type Type = 'CLEAR' | 'LAPSE' | 'TOGGLE_RUNNING'
-
-interface IAction {
-  payload?: {
-    now: number
-    startTime: number
-  }
-  type: Type
+interface INewState {
+  lapse?: number
+  running?: boolean
 }
 
-function reducer(state: IInitialState, { payload, type }: IAction) {
-  switch (type) {
-    case 'CLEAR':
-      return {
-        ...state,
-        lapse: 0,
-        running: false,
-      }
+const reducer = (currentState: ICurrentState, newState: INewState) => ({
+  ...currentState,
+  ...newState,
+})
 
-    case 'LAPSE':
-      return {
-        ...state,
-        lapse: payload!.now - payload!.startTime,
-      }
-
-    case 'TOGGLE_RUNNING':
-      return {
-        ...state,
-        running: !state.running,
-      }
-
-    default:
-      return state
-  }
-}
-
-const Stopwatch: React.FunctionComponent = () => {
-  const [{ running, lapse }, dispatch] = useReducer(reducer, {
+const useStopWatch = () => {
+  const [{ running, lapse }, setState] = useReducer(reducer, {
     lapse: 0,
     running: false,
   })
@@ -58,35 +32,62 @@ const Stopwatch: React.FunctionComponent = () => {
     } else {
       const startTime = Date.now() - lapse
       intervalRef.current = window.setInterval(() => {
-        dispatch({
-          payload: {
-            now: Date.now(),
-            startTime,
-          },
-          type: 'LAPSE',
+        setState({
+          lapse: Date.now() - startTime,
         })
       }, 0)
     }
-    dispatch({
-      type: 'TOGGLE_RUNNING',
+    setState({
+      running: !running,
     })
   }
 
   function handleClearClick() {
     clearInterval(intervalRef.current)
-    dispatch({
-      type: 'CLEAR',
+    setState({
+      lapse: 0,
+      running: false,
     })
   }
+
+  return {
+    handleClearClick,
+    handleRunClick,
+    lapse,
+    running,
+  }
+}
+
+const Stopwatch: React.FunctionComponent = () => {
+  const stopWatchOne = useStopWatch()
+  const stopWatchTwo = useStopWatch()
 
   return (
     <div>
       <label>
-        {lapse}
+        {stopWatchOne.lapse}
         ms
       </label>
-      <button onClick={handleRunClick}>{running ? 'Stop' : 'Start'}</button>
-      <button onClick={handleClearClick}>Clear</button>
+      <button onClick={stopWatchOne.handleRunClick}>
+        {stopWatchOne.running ? 'Stop' : 'Start'}
+      </button>
+      <button onClick={stopWatchOne.handleClearClick}>Clear</button>
+
+      <hr />
+
+      <strong>Lapse Difference:</strong>
+      <span>{stopWatchOne.lapse - stopWatchTwo.lapse} ms</span>
+
+      <hr />
+
+      <label>
+        {stopWatchTwo.lapse}
+        ms
+      </label>
+      <button onClick={stopWatchTwo.handleRunClick}>
+        {stopWatchTwo.running ? 'Stop' : 'Start'}
+      </button>
+      <button onClick={stopWatchTwo.handleClearClick}>Clear</button>
     </div>
   )
 }
