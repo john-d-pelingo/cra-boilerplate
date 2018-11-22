@@ -13,6 +13,7 @@ import {
   LazyTilt,
   Modal,
   Names,
+  Pokemon,
   Stopwatch,
   Tilt,
   Toggle,
@@ -60,9 +61,15 @@ class App extends React.Component {
         <br />
         <br />
 
-        <h2 className={styles.subtitle}>Suspense</h2>
+        <h2 className={styles.subtitle}>lazy and Suspense</h2>
         <br />
         <LazyTilt />
+        <br />
+        <br />
+
+        <h2 className={styles.subtitle}>Optimization with react-cache</h2>
+        <br />
+        <Pokemon />
         <br />
         <br />
 
