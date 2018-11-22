@@ -1,0 +1,24 @@
+.root {
+  background: linear-gradient(
+      217deg,
+      rgba(88, 0, 52, 0.8),
+      rgba(0, 152, 99, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 21, 52, 0.8), rgba(88, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 2, 255, 0.8), rgba(0, 99, 255, 0) 70.71%);
+  max-width: 500px;
+  margin: 0 auto;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  width: 200px;
+  height: 50px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

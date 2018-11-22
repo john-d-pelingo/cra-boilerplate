@@ -10,6 +10,7 @@ import {
   GreetingLoaderDependencyInjection,
   GreetingLoaderHttpJestMock,
   HiddenMessage,
+  LazyTilt,
   Modal,
   Names,
   Stopwatch,
@@ -56,6 +57,12 @@ class App extends React.Component {
         <h2 className={styles.subtitle}>useMemo</h2>
         <br />
         <Names />
+        <br />
+        <br />
+
+        <h2 className={styles.subtitle}>Suspense</h2>
+        <br />
+        <LazyTilt />
         <br />
         <br />
 

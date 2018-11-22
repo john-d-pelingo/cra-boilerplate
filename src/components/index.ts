@@ -1,5 +1,6 @@
 export { default as App } from './App'
 export { Counter, Names, Stopwatch, Tilt } from './EggheadUseHook'
+export { default as LazyTilt } from './EggheadLazyLoad'
 export { default as FavoriteNumber } from './TestingJavaScriptBasic'
 export { default as ErrorBoundary } from './TestingJavaScriptErrorBoundary'
 export { default as Editor } from './TestingJavaScriptForm'
