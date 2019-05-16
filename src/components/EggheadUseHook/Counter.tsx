@@ -15,13 +15,9 @@ function useCounter(step: number = 1) {
   const [count, setCount] = useState(initialCount)
   const increment = () => setCount(count + step)
 
-  useEffect(
-    () => {
-      window.localStorage.setItem('count', `${count}`)
-    },
-    // Will run only when the count effect changes
-    [count],
-  )
+  useEffect(() => {
+    window.localStorage.setItem('count', `${count}`)
+  }, [count]) // Will run only when the count effect changes
 
   return {
     count,
