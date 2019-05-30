@@ -1,8 +1,8 @@
 import 'jest-dom/extend-expect'
 
+import { fireEvent, render, wait, waitForElement } from '@testing-library/react'
 import React from 'react'
 import { Redirect as MockedRedirect } from 'react-router-dom'
-import { fireEvent, render, wait, waitForElement } from 'react-testing-library'
 import { build, fake, sequence } from 'test-data-bot'
 
 import { savePost as mockedSavePost } from '../../../helpers/api'

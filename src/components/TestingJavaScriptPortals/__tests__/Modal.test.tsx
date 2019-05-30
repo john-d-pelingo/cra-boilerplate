@@ -1,7 +1,7 @@
 import 'jest-dom/extend-expect'
 
+import { render, within } from '@testing-library/react'
 import React from 'react'
-import { render, within } from 'react-testing-library'
 
 import Modal from '../Modal'
 

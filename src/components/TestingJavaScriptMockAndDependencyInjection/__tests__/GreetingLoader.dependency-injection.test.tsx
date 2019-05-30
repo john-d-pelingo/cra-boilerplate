@@ -1,7 +1,7 @@
 import 'jest-dom/extend-expect'
 
+import { fireEvent, render, wait } from '@testing-library/react'
 import React from 'react'
-import { fireEvent, render, wait } from 'react-testing-library'
 
 import GreetingLoader from '../GreetingLoader.dependency-injection'
 
