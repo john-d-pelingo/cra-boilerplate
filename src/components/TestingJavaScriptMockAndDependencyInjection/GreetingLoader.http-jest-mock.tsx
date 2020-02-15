@@ -2,11 +2,11 @@ import React from 'react'
 
 import { loadGreeting } from '../../helpers/api'
 
-interface IGreetingLoaderState {
+interface GreetingLoaderState {
   greeting: string
 }
 
-class GreetingLoader extends React.Component<{}, IGreetingLoaderState> {
+class GreetingLoader extends React.Component<{}, GreetingLoaderState> {
   inputRef = React.createRef<HTMLInputElement>()
 
   state = { greeting: '' }

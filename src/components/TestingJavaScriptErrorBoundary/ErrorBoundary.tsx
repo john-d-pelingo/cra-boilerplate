@@ -2,17 +2,17 @@ import React from 'react'
 
 import { reportError } from '../../helpers/api'
 
-interface IErrorBoundaryProps {
+interface ErrorBoundaryProps {
   children: React.ReactNode
 }
 
-interface IErrorBoundaryState {
+interface ErrorBoundaryState {
   hasError: boolean
 }
 
 class ErrorBoundary extends React.Component<
-  IErrorBoundaryProps,
-  IErrorBoundaryState
+  ErrorBoundaryProps,
+  ErrorBoundaryState
 > {
   state = { hasError: false }
 

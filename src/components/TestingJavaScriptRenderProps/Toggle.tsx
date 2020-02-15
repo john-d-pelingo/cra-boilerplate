@@ -1,19 +1,19 @@
 import React from 'react'
 
-interface IRenderPropOptions {
+interface RenderPropOptions {
   on: boolean
   toggle: () => void
 }
 
-interface IToggleProps {
-  children: (renderPropOptions: IRenderPropOptions) => React.ReactNode
+interface ToggleProps {
+  children: (renderPropOptions: RenderPropOptions) => React.ReactNode
 }
 
-interface IToggleState {
+interface ToggleState {
   on: boolean
 }
 
-class Toggle extends React.Component<IToggleProps, IToggleState> {
+class Toggle extends React.Component<ToggleProps, ToggleState> {
   state = { on: false }
 
   render() {

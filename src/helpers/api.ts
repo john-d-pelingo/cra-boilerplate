@@ -8,39 +8,39 @@ const sleep = (time: number): Promise<void> =>
     setTimeout(resolve, time)
   })
 
-interface IPostReturnData {
+interface PostReturnData {
   data: {
-    post: IPostData
+    post: PostData
   }
 }
 
-export interface IPostData {
+export interface PostData {
   authorId: string
   content: string
   tags: string[]
   title: string
 }
 
-async function savePost(postData: IPostData): Promise<IPostReturnData> {
+async function savePost(postData: PostData): Promise<PostReturnData> {
   await sleep(1000)
   return { data: { post: postData } }
 }
 
 const greetings = ['Hello', 'Hi', 'Hey there', `What's up`, 'Howdy', `G'day`]
 
-export interface IGreeting {
+export interface Greeting {
   data: {
     greeting: string
   }
 }
 
-async function loadGreeting(subject: string): Promise<IGreeting> {
-  return { data: { greeting: `${await fetchRandomGreeting()} ${subject}` } }
-}
-
 async function fetchRandomGreeting(): Promise<string> {
   await sleep(1000)
   return greetings[Math.floor(Math.random() * greetings.length)]
+}
+
+async function loadGreeting(subject: string): Promise<Greeting> {
+  return { data: { greeting: `${await fetchRandomGreeting()} ${subject}` } }
 }
 
 // a fire-and-forget function to report errors

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import '@testing-library/jest-dom/extend-expect'
 
 import { fireEvent, render } from '@testing-library/react'

@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "format": "yarn pretty --write",
     "format:d": "yarn pretty --list-different",
-    "lint": "tslint --config tslint.json --project tsconfig.json --force *.{ts,tsx}",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:staged": "lint-staged",
     "posttest": "yarn test:t",
     "pretty": "prettier --config .prettierrc 'src/**/*.{css,js,ts,tsx}'",
@@ -60,6 +60,9 @@
     "@types/react-transition-group": "^4.2.2",
     "@types/vanilla-tilt": "^1.4.1",
     "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.7",
     "node-sass": "^4.11.0",
@@ -70,9 +73,6 @@
     "rimraf": "^3.0.0",
     "serve": "^11.0.0",
     "test-data-bot": "^0.8.0",
-    "tslint": "^5.12.0",
-    "tslint-config-prettier": "^1.17.0",
-    "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.2.2"
   },
   "jest": {

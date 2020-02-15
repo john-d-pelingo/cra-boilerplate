@@ -1,27 +1,27 @@
 import React from 'react'
 
-import { IGreeting } from '../../helpers/api'
+import { Greeting } from '../../helpers/api'
 
-interface IGreetingLoaderProps {
-  loadGreeting?: (subject: string) => Promise<IGreeting>
+interface GreetingLoaderProps {
+  loadGreeting?: (subject: string) => Promise<Greeting>
 }
 
-interface IGreetingLoaderDefaultProps {
-  loadGreeting: (subject: string) => Promise<IGreeting>
+interface GreetingLoaderDefaultProps {
+  loadGreeting: (subject: string) => Promise<Greeting>
 }
 
-type IGreetingLoaderPropsWithDefaults = IGreetingLoaderProps &
-  IGreetingLoaderDefaultProps
+type IGreetingLoaderPropsWithDefaults = GreetingLoaderProps &
+  GreetingLoaderDefaultProps
 
-interface IGreetingLoaderState {
+interface GreetingLoaderState {
   greeting: string
 }
 
 class GreetingLoader extends React.Component<
-  IGreetingLoaderProps,
-  IGreetingLoaderState
+  GreetingLoaderProps,
+  GreetingLoaderState
 > {
-  static defaultProps: IGreetingLoaderDefaultProps = {
+  static defaultProps: GreetingLoaderDefaultProps = {
     loadGreeting: () =>
       Promise.resolve({
         data: {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-interface IUpperProps {
+interface UpperProps {
   children: string
 }
 
-const Upper: React.FunctionComponent<IUpperProps> = ({ children }) => {
+const Upper: React.FunctionComponent<UpperProps> = ({ children }) => {
   const [count, setCount] = useState(0)
   return (
     <div>

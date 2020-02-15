@@ -3,13 +3,13 @@ import { unstable_createResource as createResource } from 'react-cache'
 
 import fetchPokemon from './fetch-pokemon'
 
-interface IPokemonInfoProps {
+interface PokemonInfoProps {
   pokemonName: string
 }
 
 const myPokemon = createResource(fetchPokemon)
 
-const PokemonInfo: React.FunctionComponent<IPokemonInfoProps> = ({
+const PokemonInfo: React.FunctionComponent<PokemonInfoProps> = ({
   pokemonName,
 }) => {
   const pokemon = myPokemon.read(pokemonName)

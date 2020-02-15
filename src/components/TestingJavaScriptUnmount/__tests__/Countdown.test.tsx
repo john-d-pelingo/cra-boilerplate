@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import '@testing-library/jest-dom/extend-expect'
 
 import { render } from '@testing-library/react'
@@ -12,6 +13,7 @@ beforeEach(() => {
 })
 
 afterEach(() => {
+  // eslint-disable-next-line no-extra-semi
   ;(console as any).error.mockRestore()
 })
 

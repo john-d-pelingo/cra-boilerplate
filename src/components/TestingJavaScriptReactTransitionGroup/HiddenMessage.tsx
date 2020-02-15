@@ -2,11 +2,11 @@ import React from 'react'
 
 import Fade from './Fade'
 
-interface IHiddenMessageState {
+interface HiddenMessageState {
   show: boolean
 }
 
-class HiddenMessage extends React.Component<{}, IHiddenMessageState> {
+class HiddenMessage extends React.Component<{}, HiddenMessageState> {
   state = { show: false }
 
   toggle = (): void => {

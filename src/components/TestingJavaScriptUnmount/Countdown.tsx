@@ -1,10 +1,10 @@
 import React from 'react'
 
-interface ICountdownState {
+interface CountdownState {
   remainingTime: number
 }
 
-class Countdown extends React.Component<{}, ICountdownState> {
+class Countdown extends React.Component<{}, CountdownState> {
   state = { remainingTime: 10000 }
 
   interval: number | null = null

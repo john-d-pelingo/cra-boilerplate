@@ -2,7 +2,7 @@ import React, { Suspense, useState } from 'react'
 
 import PokemonInfo from './PokemonInfo'
 
-interface IPokemonElements extends HTMLFormControlsCollection {
+interface PokemonElements extends HTMLFormControlsCollection {
   pokemonName: {
     value: string
   }
@@ -14,7 +14,7 @@ const Pokemon: React.FunctionComponent = () => {
     e.preventDefault()
 
     const eventTargetElements = (e.target as HTMLFormElement)
-      .elements as IPokemonElements
+      .elements as PokemonElements
 
     setPokemonName(eventTargetElements.pokemonName.value)
   }

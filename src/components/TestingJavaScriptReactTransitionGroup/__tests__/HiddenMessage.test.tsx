@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
 
-import { IFadeProps as MockedIFadeProps } from '../Fade'
+import { FadeProps as MockedIFadeProps } from '../Fade'
 import HiddenMessage from '../HiddenMessage'
 
 jest.mock('react-transition-group', () => ({

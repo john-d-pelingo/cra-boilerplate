@@ -1,18 +1,18 @@
 import React from 'react'
 
-interface IFavoriteNumberProps {
+interface FavoriteNumberProps {
   max: number
   min: number
 }
 
-interface IFavoriteNumberState {
+interface FavoriteNumberState {
   numberValue: number
   numberEntered: boolean
 }
 
 class FavoriteNumber extends React.Component<
-  IFavoriteNumberProps,
-  IFavoriteNumberState
+  FavoriteNumberProps,
+  FavoriteNumberState
 > {
   static defaultProps = { min: 1, max: 9 }
   state = { numberValue: 0, numberEntered: false }

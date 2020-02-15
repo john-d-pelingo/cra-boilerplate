@@ -3,25 +3,25 @@ import { Redirect } from 'react-router-dom'
 
 import { savePost } from '../../helpers/api'
 
-interface IEditorProps {
+interface EditorProps {
   user: {
     id: string
   }
 }
 
-interface IEditorState {
+interface EditorState {
   error: string | null
   isSaving: boolean
   redirect: boolean
 }
 
-interface IElements extends HTMLFormControlsCollection {
+interface Elements extends HTMLFormControlsCollection {
   content: RadioNodeList
   tags: RadioNodeList
   title: RadioNodeList
 }
 
-class Editor extends React.Component<IEditorProps, IEditorState> {
+class Editor extends React.Component<EditorProps, EditorState> {
   state = {
     error: null,
     isSaving: false,
@@ -31,7 +31,7 @@ class Editor extends React.Component<IEditorProps, IEditorState> {
   handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
     if (event.target instanceof HTMLFormElement) {
-      const { title, content, tags } = event.target.elements as IElements
+      const { title, content, tags } = event.target.elements as Elements
 
       const newPost = {
         authorId: this.props.user.id,
@@ -50,6 +50,7 @@ class Editor extends React.Component<IEditorProps, IEditorState> {
             redirect: true,
           })
         },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (response: any) => {
           this.setState({
             error: response.data.error,

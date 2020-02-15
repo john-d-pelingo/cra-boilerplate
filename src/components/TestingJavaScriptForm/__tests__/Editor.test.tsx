@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import '@testing-library/jest-dom/extend-expect'
 
 import { fireEvent, render, wait, waitForElement } from '@testing-library/react'
@@ -18,6 +19,7 @@ jest.mock('../../../helpers/api', () => ({
 
 afterEach(() => {
   // Keep tests isolated
+  // eslint-disable-next-line no-extra-semi
   ;(mockedSavePost as any).mockClear()
   ;(MockedRedirect as any).mockClear()
 })

@@ -1,16 +1,16 @@
 import React, { useEffect, useReducer, useRef } from 'react'
 
-interface ICurrentState {
+interface CurrentState {
   lapse: number
   running: boolean
 }
 
-interface INewState {
+interface NewState {
   lapse?: number
   running?: boolean
 }
 
-const reducer = (currentState: ICurrentState, newState: INewState) => ({
+const reducer = (currentState: CurrentState, newState: NewState) => ({
   ...currentState,
   ...newState,
 })

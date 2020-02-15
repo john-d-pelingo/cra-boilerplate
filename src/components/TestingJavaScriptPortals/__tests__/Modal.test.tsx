@@ -13,6 +13,7 @@ describe('components/Modal', () => {
       </Modal>,
     )
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const { getByText } = within(document.getElementById('modal-root')!)
 
     expect(getByText('test')).toBeInTheDocument()

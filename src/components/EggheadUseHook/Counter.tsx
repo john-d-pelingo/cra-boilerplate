@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function useCounter(step: number = 1) {
+function useCounter(step = 1) {
   // Passing a function will make sure that the contents of it will run only
   // when the component is rendered for the first time
   const initialCount = (): number => {

@@ -3,16 +3,16 @@ import VanillaTilt, { HTMLVanillaTiltElement } from 'vanilla-tilt'
 
 import styles from './styles.module.scss'
 
-interface ITileProps {
+interface TileProps {
   children: React.ReactNode
 }
 
-interface IHTMLVanillaTiltElement extends HTMLVanillaTiltElement {
+interface CustomHTMLVanillaTiltElement extends HTMLVanillaTiltElement {
   align: string
 }
 
-const Tilt: React.FunctionComponent<ITileProps> = ({ children }) => {
-  const titleRef = useRef<IHTMLVanillaTiltElement>(null)
+const Tilt: React.FunctionComponent<TileProps> = ({ children }) => {
+  const titleRef = useRef<CustomHTMLVanillaTiltElement>(null)
 
   useEffect(() => {
     const currentTitleRef = titleRef.current
