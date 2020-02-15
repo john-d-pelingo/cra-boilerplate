@@ -11,8 +11,6 @@ export {
 } from './TestingJavaScriptMockAndDependencyInjection'
 export { default as Modal } from './TestingJavaScriptPortals'
 export { default as Main } from './TestingJavaScriptReactRouter'
-export {
-  default as HiddenMessage,
-} from './TestingJavaScriptReactTransitionGroup'
+export { default as HiddenMessage } from './TestingJavaScriptReactTransitionGroup'
 export { default as Toggle } from './TestingJavaScriptRenderProps'
 export { default as Countdown } from './TestingJavaScriptUnmount'
