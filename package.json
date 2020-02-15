@@ -36,6 +36,7 @@
     "build:ci": "yarn build",
     "prebuild": "run-s validate test sweep",
     "--PRODUCTION--": "echo \"--PRODUCTION--\" && exit 1",
+    "release": "standard-version",
     "start:prod": "serve -l 8080"
   },
   "dependencies": {
@@ -74,6 +75,7 @@
     "react-test-renderer": "^16.7.0",
     "rimraf": "^3.0.0",
     "serve": "^11.0.0",
+    "standard-version": "^7.1.0",
     "test-data-bot": "^0.8.0",
     "typescript": "^3.2.2"
   },
