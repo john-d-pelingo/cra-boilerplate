@@ -13,7 +13,7 @@
     "url": "https://github.com/john-d-pelingo/cra-boilerplate/issues"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=13"
   },
   "scripts": {
     "--DEVELOPMENT--": "echo \"--DEVELOPMENT--\" && exit 1",
