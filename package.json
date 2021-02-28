@@ -1,9 +1,14 @@
 {
   "name": "cra-boilerplate",
   "version": "0.0.3",
-  "description": "create-react-app with extended configuration",
-  "private": true,
-  "author": "John Darryl Pelingo <johndarrylpelingo@gmail.com> (https://github.com/john-d-pelingo)",
+  "description": "This is a template repo for React projects with the help of Create React App with extended configuration.",
+  "private": false,
+  "homepage": "https://github.com/john-d-pelingo/cra-boilerplate",
+  "author": {
+    "email": "johndarrylpelingo@gmail.com",
+    "name": "John Darryl Pelingo",
+    "url": "https://johndpelingo.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,6 +17,12 @@
   "bugs": {
     "url": "https://github.com/john-d-pelingo/cra-boilerplate/issues"
   },
+  "keywords": [
+    "create-react-app",
+    "react",
+    "template",
+    "typescript"
+  ],
   "engines": {
     "node": ">=14"
   },
