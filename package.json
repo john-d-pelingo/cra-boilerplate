@@ -1,6 +1,6 @@
 {
   "name": "cra-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create-react-app with extended configuration",
   "private": true,
   "author": "John Darryl Pelingo <johndarrylpelingo@gmail.com> (https://github.com/john-d-pelingo)",

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/john-d-pelingo/cra-boilerplate/compare/v0.0.2...v0.0.3) (2021-02-28)
+
+
+### Features
+
+* make it template ([676e8cc](https://github.com/john-d-pelingo/cra-boilerplate/commit/676e8cc40ed4022cbdc7215a62fd834a3f068d38))
+
 ### 0.0.2 (2020-02-15)
 
 
