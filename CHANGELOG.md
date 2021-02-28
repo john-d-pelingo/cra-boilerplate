@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/john-d-pelingo/cra-boilerplate/compare/v0.0.3...v0.0.4) (2021-02-28)
+
+
+### Features
+
+* open sauce ([a0b6a50](https://github.com/john-d-pelingo/cra-boilerplate/commit/a0b6a50a86ebc3b7547298795557d930b865ba72))
+
 ### [0.0.3](https://github.com/john-d-pelingo/cra-boilerplate/compare/v0.0.2...v0.0.3) (2021-02-28)
 
 

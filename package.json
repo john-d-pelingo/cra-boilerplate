@@ -1,6 +1,6 @@
 {
   "name": "cra-boilerplate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is a template repo for React projects with the help of Create React App with extended configuration.",
   "private": false,
   "homepage": "https://github.com/john-d-pelingo/cra-boilerplate",
