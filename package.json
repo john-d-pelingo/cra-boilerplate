@@ -27,12 +27,17 @@
     "node": ">=14"
   },
   "prettier": "@jdp-dev/prettier-config",
+  "standard-version": {
+    "scripts": {
+      "prerelease": "yarn test"
+    }
+  },
   "scripts": {
     "--DEVELOPMENT--": "echo \"--DEVELOPMENT--\" && exit 1",
     "dev": "react-scripts start",
     "eject": "react-scripts eject",
     "format": "prettier --write 'src/**/*.{css,js,ts,tsx}' '**/*.md'",
-    "lint": "eslint ./src/ --ext .js,.ts,.tsx --max-warnings 16 --report-unused-disable-directives",
+    "lint": "eslint ./src/ --ext .js,.ts,.tsx --max-warnings 0 --report-unused-disable-directives",
     "postinstall": "husky install",
     "sweep": "rimraf build coverage",
     "test": "CI=true react-scripts test --env=jsdom --no-cache",
